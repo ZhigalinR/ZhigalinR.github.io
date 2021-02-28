@@ -10,6 +10,7 @@ var swiper = new Swiper('.slider-style-banner', {
 	},	
 	pagination: {
 		el: '.ssb-pagination',
+		 clickable: true,
 	},
 	breakpoints: {
         0: {          
@@ -22,6 +23,7 @@ var swiper = new Swiper('.slider-style-banner', {
         },        
         1640: {
 			spaceBetween: 40,
+			centeredSlides: false,
         },
       }	
 });
@@ -41,20 +43,21 @@ var swiper = new Swiper('.bw-slider', {
 			centeredSlides: false,
         },        
         1640: {
-			
+			enteredSlides: false,
         },
       }	
 });
 
 
-var swiper = new Swiper('.product-item-slider', {
+
+var swiper = new Swiper('.product-item-slider',  {
 	lazy: true,
 	loop: true,	
 	slidesPerView: 4,
 	spaceBetween: 40,
 	speed: 600,
 	navigation: {
-        nextEl: '.ps-button-next',
+        nextEl: '.ps-button-next', 
         prevEl: '.ps-button-prev',
 	},	
 	breakpoints: {
@@ -70,20 +73,164 @@ var swiper = new Swiper('.product-item-slider', {
 			spaceBetween: 10,			
 			slidesPerView: 2,
         },  
-		768: {          
-			centeredSlides: false,			
+		768: {          						
 			slidesPerView: 2,
 			spaceBetween: 20,
         }, 
 		980: {
 			slidesPerView: 4,
-			spaceBetween: 20,
+			spaceBetween: 20,			
 		},
         1640: {
-			spaceBetween: 40,			
+			spaceBetween: 40,	
+			slidesPerView: 4,
         },
       }	
 });
+
+
+
+
+
+var swiper = new Swiper('.pis-1',  {
+	lazy: true,
+	loop: false,	
+	slidesPerView: 4,
+	spaceBetween: 40,
+	speed: 600,
+	navigation: {
+        nextEl: '.ps-button-next-1', 
+        prevEl: '.ps-button-prev-1',
+	},	
+	breakpoints: {
+        0: {          
+			spaceBetween: 10,			
+			slidesPerView: 1,
+        }, 
+		420: {          
+			spaceBetween: 10,			
+			slidesPerView: 1,
+        }, 
+		700: {          
+			spaceBetween: 10,			
+			slidesPerView: 2,
+        },  
+		768: {          						
+			slidesPerView: 2,
+			spaceBetween: 20,
+        }, 
+		980: {
+			slidesPerView: 4,
+			spaceBetween: 20,			
+		},
+        1640: {
+			spaceBetween: 40,	
+			slidesPerView: 4,
+        },
+      }	
+});
+
+var swiper = new Swiper('.pis-2',  {
+	lazy: true,
+	loop: false,	
+	slidesPerView: 4,
+	spaceBetween: 40,
+	speed: 600,
+	navigation: {
+        nextEl: '.ps-button-next-2', 
+        prevEl: '.ps-button-prev-2',
+	},	
+	breakpoints: {
+        0: {          
+			spaceBetween: 10,			
+			slidesPerView: 1,
+        }, 
+		420: {          
+			spaceBetween: 10,			
+			slidesPerView: 1,
+        }, 
+		700: {          
+			spaceBetween: 10,			
+			slidesPerView: 2,
+        },  
+		768: {          						
+			slidesPerView: 2,
+			spaceBetween: 20,
+        }, 
+		980: {
+			slidesPerView: 4,
+			spaceBetween: 20,			
+		},
+        1640: {
+			spaceBetween: 40,	
+			slidesPerView: 4,
+        },
+      }	
+});
+
+
+
+
+
+
+
+var swiper = new Swiper('.small-banner-slider-wrapper', {
+	lazy: true,
+	loop: true,	
+	slidesPerView: 3,
+	spaceBetween: 40,	
+	speed: 600,
+	navigation: {
+        nextEl: '.small-sb-next',
+        prevEl: '.small-sb-prev',
+	},	
+	pagination: {
+		el: '.small-sb-pagination',
+		clickable: true,
+	},
+	breakpoints: {
+        0: {          
+			spaceBetween: 10,
+			slidesPerView: 1,
+			
+        },        
+		540: {          
+			spaceBetween: 10,
+			slidesPerView: 2,
+			
+		},
+		770: {          
+			centeredSlides: false,
+			spaceBetween: 20,		
+			slidesPerView: 3,
+        },        
+        1640: {
+			spaceBetween: 40,
+			slidesPerView: 3,
+			centeredSlides: false
+        },
+      }	
+})
+
+
+var swiper = new Swiper('.pc-slider-wrapper', {
+	lazy: true,
+	loop: false,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	speed: 600,
+	navigation: {
+        nextEl: '.pc-next',
+        prevEl: '.pc-prev',
+	},	
+	pagination: {
+		el: '.pc-pagination',
+		clickable: true,
+	},
+	
+});
+
+
 
 /* Scrollbar */
 $(document).ready(function() {
@@ -100,6 +247,27 @@ $(document).ready(function() {
 
 /* File input */
 const actualBtn = document.getElementById('actual-btn');
+
+
+/* Accordion */  
+$(document).ready(function () {
+
+    var acc = document.getElementsByClassName("qait");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+});
 
 const fileChosen = document.getElementById('file-chosen');
 
