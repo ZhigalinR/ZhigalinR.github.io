@@ -195,12 +195,39 @@
 	border: 1px solid #0DB14B;
 	-webkit-border-radius: 12px;
     border-radius: 12px;
+	padding: 10px;
+    line-height: 14px;
 }
 .more-links span {
 	display: inline-block;
 	vertical-align: middle;
 	margin-bottom: 10px;
 }
+
+
+/*
+.promo-wrapper.category-slider .promo-slider {
+	padding: 20px 0px 20px 0px;
+	position: relative;
+	z-index: 4;
+	overflow: hidden;
+}
+.promo-wrapper.category-slider .swiper-container {
+	overflow: inherit;
+}
+.promo-wrapper.category-slider .ar-button-prev {
+	left: 5px;
+}
+.promo-wrapper.category-slider .ar-button-prev:active {
+	left: 0;
+}
+.promo-wrapper.category-slider .ar-button-next {
+	right: 5px;
+}
+.promo-wrapper.category-slider .ar-button-next:active {
+	right: 0px;
+}
+*/
 
 
 

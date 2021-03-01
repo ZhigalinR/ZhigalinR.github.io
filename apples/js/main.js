@@ -89,87 +89,56 @@ var swiper = new Swiper('.product-item-slider',  {
 });
 
 
+var mySwiper;
 
-
-
-var swiper = new Swiper('.pis-1',  {
-	lazy: true,
-	loop: false,	
-	slidesPerView: 4,
-	spaceBetween: 40,
-	speed: 600,
-	navigation: {
-        nextEl: '.ps-button-next-1', 
-        prevEl: '.ps-button-prev-1',
-	},	
-	breakpoints: {
-        0: {          
-			spaceBetween: 10,			
-			slidesPerView: 1,
-        }, 
-		420: {          
-			spaceBetween: 10,			
-			slidesPerView: 1,
-        }, 
-		700: {          
-			spaceBetween: 10,			
-			slidesPerView: 2,
-        },  
-		768: {          						
-			slidesPerView: 2,
-			spaceBetween: 20,
-        }, 
-		980: {
-			slidesPerView: 4,
-			spaceBetween: 20,			
-		},
-        1640: {
-			spaceBetween: 40,	
-			slidesPerView: 4,
-        },
-      }	
+var elements = document.querySelectorAll('.swiper-container');
+Array.prototype.forEach.call(elements, function(el, i){
+		
+	  console.log(el);	
+		
+      mySwiper = new Swiper('.' + el.getAttribute('data-id'), {
+		
+		  lazy: true,
+		  loop: false,	
+		  slidesPerView: 4,
+		  spaceBetween: 40,
+		  speed: 600,
+		  navigation: {
+			  
+			 	nextEl: el.nextElementSibling.nextElementSibling,
+				prevEl: el.nextElementSibling,
+			  
+		  },	
+		  breakpoints: {
+			0: {          
+				spaceBetween: 10,			
+				slidesPerView: 1,
+			}, 
+			420: {          
+				spaceBetween: 10,			
+				slidesPerView: 1,
+			}, 
+			700: {          
+				spaceBetween: 10,			
+				slidesPerView: 2,
+			},  
+			768: {          						
+				slidesPerView: 2,
+				spaceBetween: 20,
+			}, 
+			980: {
+				slidesPerView: 4,
+				spaceBetween: 20,			
+			},
+			1640: {
+				spaceBetween: 40,	
+				slidesPerView: 4,
+			},
+		  }	 
+		  
+	  });    
+		
 });
-
-var swiper = new Swiper('.pis-2',  {
-	lazy: true,
-	loop: false,	
-	slidesPerView: 4,
-	spaceBetween: 40,
-	speed: 600,
-	navigation: {
-        nextEl: '.ps-button-next-2', 
-        prevEl: '.ps-button-prev-2',
-	},	
-	breakpoints: {
-        0: {          
-			spaceBetween: 10,			
-			slidesPerView: 1,
-        }, 
-		420: {          
-			spaceBetween: 10,			
-			slidesPerView: 1,
-        }, 
-		700: {          
-			spaceBetween: 10,			
-			slidesPerView: 2,
-        },  
-		768: {          						
-			slidesPerView: 2,
-			spaceBetween: 20,
-        }, 
-		980: {
-			slidesPerView: 4,
-			spaceBetween: 20,			
-		},
-        1640: {
-			spaceBetween: 40,	
-			slidesPerView: 4,
-        },
-      }	
-});
-
-
-
 
 
 
